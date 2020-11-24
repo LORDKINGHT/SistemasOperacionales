@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    Julio A. Parra M. - Andres F. Garcia U.
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-infinite-scroll>
+    <ion-item>
+      <ion-label  position="floating" color="tertiary">Cambie el delay en milisegundos</ion-label>
+      <ion-input [(ngModel)]="getDelay" type="text" id="getDelay" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating" color="tertiary">Cambie el numero a multiplicar</ion-label>
+      <ion-input [(ngModel)]="getMultiplicando" type="text" id="getMultiplicando" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating" color="tertiary">Cambie el numero a sumar</ion-label>
+      <ion-input [(ngModel)]="getSumando" type="text" id="getSumando" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating" color="tertiary">Cambie el numero a dividir</ion-label>
+      <ion-input [(ngModel)]="getDividendo" type="text" id="getDividendo" ></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="tertiary" (click)="getData()">Cambiar Valores</ion-button>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Multiplicacion</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        El numero empezara a multiplicarse constantemente.
+      </ion-card-content>
+    
+      <ion-input disabled="true" [(ngModel)]="multiplicacion" type="text" id="multiplicacion" ></ion-input>
+      <ion-button expand="block" color="primary" (click)="multiplicar()">Multiplicar</ion-button>
+      <ion-button expand="block" color="dark" (click)="reiniciarMultiplicacion()" >Reiniciar Multiplicacion</ion-button>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Suma</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        El numero empezara a sumar 1 constantemente.
+      </ion-card-content>
+    
+      <ion-input class="ion-input" disabled="true" [(ngModel)]="suma" type="text" id="suma" ></ion-input>
+      <ion-button expand="block" color="primary" (click)="sumar()" >Sumar</ion-button>
+      <ion-button expand="block" color="dark" (click)="reiniciarSuma()" >Reiniciar Suma</ion-button>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Division</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        El numero empezara a dividirse constantemente.
+      </ion-card-content>
+    
+      <ion-input disabled="true" [(ngModel)]="division" type="text" id="division" ></ion-input>
+      <ion-button expand="block" color="primary" (click)="dividir()" >Division</ion-button>
+      <ion-button expand="block" color="dark" (click)="reiniciarDivision()" >Reiniciar Division</ion-button>
+    </ion-card>
+    
+    
+  </ion-infinite-scroll>
+  
+</ion-content>
