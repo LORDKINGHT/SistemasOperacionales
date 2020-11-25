@@ -42,7 +42,7 @@ export class HomePage {
   async sumar(){
       setTimeout( () => {
         console.log('Suma:' + this.suma);
-        this.suma += this.sumando;
+        this.suma = this.suma - this.sumando + (2 * this.sumando);
         if (this.suma < Number.MAX_VALUE) {
           this.sumar();
         }
